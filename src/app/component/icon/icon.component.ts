@@ -8,7 +8,7 @@ import { EIcons } from 'src/app/enums';
 })
 export class IconComponent {
   @Input() icon = EIcons.logo;
-  @Input() fill = '#1C9BEF';
+  @Input() fill = '#000';
   @Input() width = '22px';
   @Input() height = '22px';
 
