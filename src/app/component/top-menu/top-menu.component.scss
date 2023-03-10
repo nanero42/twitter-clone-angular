@@ -1,0 +1,22 @@
+:host { display: contents; }
+
+.top-menu {
+  position: sticky;
+  top: 0;
+  height: 42px;
+
+  &__container, &__list {
+    height: 100%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

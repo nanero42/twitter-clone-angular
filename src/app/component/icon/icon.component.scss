@@ -1,0 +1,22 @@
+:host { display: contents; }
+
+.icon {
+
+  &__container {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    padding: 4px;
+    background-color: var(--color-white);
+    cursor: pointer;
+  }
+  &__container:hover {
+    background-color: var(--color-hover);
+  }
+  &__container:active {
+    background-color: var(--color-active);
+  }
+}

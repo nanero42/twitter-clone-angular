@@ -1,0 +1,14 @@
+<div class="tab">
+  <div class="tab__container">
+    <ul class="tab__list">
+      <ng-container *ngFor="let tab of tabs">
+        <li class="tab__item" (click)="isActive = !isActive" [ngClass]="{'tab__item_active': isActive}">
+          <span class="tab__text-container">
+            <span class="tab__text">{{ tab }}</span>
+            <span class="tab__decor" [ngClass]="{'tab__decor_active': isActive}"></span>
+          </span>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</div>
