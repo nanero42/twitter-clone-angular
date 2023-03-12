@@ -1,9 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-
-interface ITab {
-  id: number;
-  value: string;
-}
+import { ITab } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-tabs',
