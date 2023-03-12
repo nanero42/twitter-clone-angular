@@ -1,10 +1,13 @@
 :host { display: contents; }
 
-.top-menu {
+.navbar {
   position: sticky;
   top: 0;
-  height: 42px;
   background-color: var(--color-bg);
+
+  &__container {
+    padding-top: 8px;
+  }
 
   &__container, &__list {
     height: 100%;

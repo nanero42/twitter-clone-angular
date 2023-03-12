@@ -8,7 +8,6 @@ import { ITab } from 'src/app/interfaces';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TabsComponent {
-  @Input() height = '42px';
   @Input()
   get tabs(): ITab[] { return this._copiedTabs };
   set tabs(values: ITab[]) { this._copiedTabs = values };

@@ -3,11 +3,11 @@ import { EButton, EIcons } from 'src/app/enums';
 import { ITab } from 'src/app/interfaces';
 
 @Component({
-  selector: 'app-top-menu',
-  templateUrl: './top-menu.component.html',
-  styleUrls: ['./top-menu.component.scss']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
 })
-export class TopMenuComponent {
+export class NavbarComponent {
   @Input() secondBarTabs!: ITab[];
 
   eIcons = EIcons;
