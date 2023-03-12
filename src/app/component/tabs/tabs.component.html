@@ -2,10 +2,14 @@
   <div class="tab__container">
     <ul class="tab__list df jcc aic">
       <ng-container *ngFor="let tab of tabs">
-        <li class="tab__item cup df jcc aic fdc" (click)="isActive = !isActive" [ngClass]="{'tab__item_active': isActive}">
+        <li
+          class="tab__item cup df jcc aic fdc"
+          [ngClass]="{'tab__item_active': tab.id === activeId}"
+          (click)="setActiveTab(tab.id)"
+        >
           <span class="tab__text-container df jcc aic fdc">
-            <span class="tab__text">{{ tab }}</span>
-            <span class="tab__decor" [ngClass]="{'tab__decor_active': isActive}"></span>
+            <span class="tab__text">{{ tab.value }}</span>
+            <span class="tab__decor" [ngClass]="{'tab__decor_active': tab.id === activeId}"></span>
           </span>
         </li>
       </ng-container>
