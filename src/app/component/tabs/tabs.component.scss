@@ -13,12 +13,6 @@
     height: 50px;
     background-color: var(--color-bg);
   }
-  &__item:hover {
-    background-color: var(--color-hover);
-  }
-  &__item:active {
-    background-color: var(--color-active);
-  }
 
   &__text-container {
     height: 100%;
@@ -32,10 +26,12 @@
     height: 4px;
     border-radius: 6px;
   }
+
   &__item_active {
     color: var(--color-text-black);
     font-weight: 900;
   }
+
   &__decor_active {
     background-color: var(--color-main);
   }

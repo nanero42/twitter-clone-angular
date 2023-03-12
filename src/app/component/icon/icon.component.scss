@@ -4,15 +4,8 @@
 
   &__container {
     border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    padding: 4px;
+    width: 24px;
+    height: 24px;
     background-color: var(--color-bg);
-  }
-  &__container:hover {
-    background-color: var(--color-hover);
-  }
-  &__container:active {
-    background-color: var(--color-active);
   }
 }

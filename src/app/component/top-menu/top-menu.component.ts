@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { EIcons } from 'src/app/enums';
+import { EButton, EIcons } from 'src/app/enums';
 import { ITab } from 'src/app/interfaces';
 
 @Component({
@@ -11,4 +11,5 @@ export class TopMenuComponent {
   @Input() secondBarTabs!: ITab[];
 
   eIcons = EIcons;
+  eButton = EButton;
 }

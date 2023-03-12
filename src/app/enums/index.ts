@@ -7,3 +7,10 @@ export enum EIcons {
   message = 'message',
   createPost = 'createPost',
 }
+
+export enum EButton {
+  text = 'text',
+  ghost = 'ghost',
+  raised = 'raised',
+  floating = 'floating',
+}
