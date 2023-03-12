@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { EIcons } from 'src/app/enums';
 
 @Component({
   selector: 'app-navbar-low',
@@ -7,5 +8,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarLowComponent {
-
+  eIcon = EIcons;
 }
