@@ -8,7 +8,7 @@ import { ITab } from 'src/app/interfaces';
   styleUrls: ['./top-menu.component.scss']
 })
 export class TopMenuComponent {
-  @Input() secondBartabs!: ITab[];
+  @Input() secondBarTabs!: ITab[];
 
   eIcons = EIcons;
 }
