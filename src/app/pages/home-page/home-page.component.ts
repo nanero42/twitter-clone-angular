@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-  tabs = [
+  secondBartabs = [
     { id: 0, value: 'For you' },
     { id: 1, value: 'Following' },
   ];

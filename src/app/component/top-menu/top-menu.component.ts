@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { EIcons } from 'src/app/enums';
+import { ITab } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-top-menu',
@@ -7,5 +8,7 @@ import { EIcons } from 'src/app/enums';
   styleUrls: ['./top-menu.component.scss']
 })
 export class TopMenuComponent {
+  @Input() secondBartabs!: ITab[];
+
   eIcons = EIcons;
 }
