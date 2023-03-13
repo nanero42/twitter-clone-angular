@@ -3,6 +3,7 @@
     <li
       *ngFor="let item of items"
       (click)="activeElementId = item.id"
+      [routerLink]="[item.path]"
       class="navbar-low__item df jcc aic"
     >
       <a class="navbar-low__link df jcc aic">
