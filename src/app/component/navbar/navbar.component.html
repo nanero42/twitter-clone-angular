@@ -1,18 +1,23 @@
 <nav class="navbar">
   <ul class="navbar__list df jcsb aic global__container">
-    <li class="df jcc aic">
+    <li class="df jcfs aic">
       <a class="navbar__link">
         <app-icon [icon]="eIcons.avatar" />
       </a>
     </li>
-    <li class="df jcc aic">
-      <a class="navbar__link">
-        <app-icon fill="#1C9BEF"/>
+    <li [ngClass]="{'w100': !isHomePage}">
+      <a *ngIf="isHomePage" class="navbar__link">
+        <app-icon />
       </a>
+      <div *ngIf="isSearchPage">SEARCH AUTOCOMPLETE!1!</div>
+      <h2 [style]="{'padding-left': '20px'}">
+        <ng-container *ngIf="isNotificationsPage">Notifications</ng-container>
+        <ng-container *ngIf="isMessagesPage">Messages</ng-container>
+      </h2>
     </li>
-    <li class="df jcc aic">
-      <a class="navbar__link">
-        <app-icon [icon]="eIcons.avatar" />
+    <li class="df jcfe aic">
+      <a *ngIf="!isHomePage"  class="navbar__link">
+        <app-icon [icon]="eIcons.settings" />
       </a>
     </li>
   </ul>
