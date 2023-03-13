@@ -1,34 +1,22 @@
 <nav class="navbar-low">
   <ul class="navbar-low__list df jcsa aic">
-    <li class="navbar-low__item df jcc aic">
+    <li
+      *ngFor="let item of items"
+      (click)="activeElementId = item.id"
+      class="navbar-low__item df jcc aic"
+    >
       <a class="navbar-low__link df jcc aic">
         <div class="navbar-low__container">
-          <app-icon [icon]="eIcon.home"/>
-          <span class="navbar-low__news df jcc aic"></span>
-        </div>
-      </a>
-    </li>
-    <li class="navbar-low__item df jcc aic">
-      <a class="navbar-low__link df jcc aic">
-        <div class="navbar-low__container">
-          <app-icon [icon]="eIcon.search"/>
-        </div>
-      </a>
-    </li>
-    <li class="navbar-low__item df jcc aic">
-      <a class="navbar-low__link df jcc aic">
-        <div class="navbar-low__container">
-          <app-icon [icon]="eIcon.notification"/>
-          <span class="navbar-low__count df jcc aic">3</span>
-        </div>
-      </a>
-    </li>
-    <li class="navbar-low__item df jcc aic">
-      <a class="navbar-low__link df jcc aic">
-        <div class="navbar-low__container">
-          <app-icon [icon]="eIcon.message"/>
+          <app-icon [icon]="eIcon[activeElementId === item.id ? item.iconActive : item.icon]"/>
+          <ng-container [ngSwitch]="item.templateName">
+            <ng-container *ngSwitchCase="eIcon.notification" [ngTemplateOutlet]="notification"></ng-container>
+            <ng-container *ngSwitchCase="eIcon.home" [ngTemplateOutlet]="home"></ng-container>
+          </ng-container>
         </div>
       </a>
     </li>
   </ul>
 </nav>
+
+<ng-template #notification><span class="navbar-low__count df jcc aic">3</span></ng-template>
+<ng-template #home><span class="navbar-low__news df jcc aic"></span></ng-template>
