@@ -1,14 +1,16 @@
-<nav class="navbar-low">
+<nav class="navbar-low" *ngIf="{
+  activeElementId: activeElementId$ | async
+} as state">
   <ul class="navbar-low__list df jcsa aic">
     <li
       *ngFor="let item of items"
-      (click)="activeElementId = item.id"
+      (click)="activeElementId$.next(item.id)"
       [routerLink]="[item.path]"
       class="navbar-low__item df jcc aic"
     >
       <a class="navbar-low__link df jcc aic">
         <div class="navbar-low__container">
-          <app-icon [icon]="eIcon[activeElementId === item.id ? item.iconActive : item.icon]"/>
+          <app-icon [icon]="eIcon[activeElementId$.value === item.id ? item.iconActive : item.icon]"/>
           <ng-container [ngSwitch]="item.templateName">
             <ng-container *ngSwitchCase="eIcon.notification" [ngTemplateOutlet]="notification"></ng-container>
             <ng-container *ngSwitchCase="eIcon.home" [ngTemplateOutlet]="home"></ng-container>

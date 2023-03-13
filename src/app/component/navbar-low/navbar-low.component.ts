@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Location } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { EIcons, EPagesPaths } from 'src/app/enums';
 import { INavbarLowItem } from 'src/app/interfaces';
 
@@ -8,8 +10,8 @@ import { INavbarLowItem } from 'src/app/interfaces';
   styleUrls: ['./navbar-low.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavbarLowComponent {
-  private _activeElement!: number;
+export class NavbarLowComponent implements OnInit {
+  activeElementId$ = new BehaviorSubject(0);
 
   eIcon = EIcons;
   items: INavbarLowItem[] = [
@@ -18,6 +20,14 @@ export class NavbarLowComponent {
     { id: 2, icon: EIcons.notification, iconActive: EIcons.notificationActive, path: EPagesPaths.notifications, templateName: EIcons.notification },
     { id: 3, icon: EIcons.message, iconActive: EIcons.messageActive, path: EPagesPaths.messages },
   ];
-  get activeElementId() { return this._activeElement }
-  set activeElementId(id: number) { this._activeElement = id }
+
+  constructor(private location: Location) {}
+
+  ngOnInit(): void {
+    this.location.onUrlChange((path: string) => this._trackActiveElementIdChanges(path));
+  }
+
+  private _trackActiveElementIdChanges(path: string): void {
+    this.activeElementId$.next(this.items.find((item) => path.includes(item.path))?.id || 0);
+  }
 }
