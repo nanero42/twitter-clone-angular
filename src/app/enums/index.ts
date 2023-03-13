@@ -10,6 +10,7 @@ export enum EIcons {
   message = 'message',
   messageActive = 'messageActive',
   createPost = 'createPost',
+  settings = 'settings',
 }
 
 export enum EPagesPaths {
