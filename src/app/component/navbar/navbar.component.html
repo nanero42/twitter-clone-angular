@@ -1,22 +1,20 @@
 <nav class="navbar">
-  <div class="navbar__container global__container">
-    <ul class="navbar__list df jcsb aic">
-      <li class="df jcc aic">
-        <a class="navbar__link">
-          <app-icon [icon]="eIcons.avatar" />
-        </a>
-      </li>
-      <li class="df jcc aic">
-        <a class="navbar__link">
-          <app-icon fill="#1C9BEF"/>
-        </a>
-      </li>
-      <li class="df jcc aic">
-        <a class="navbar__link">
-          <app-icon [icon]="eIcons.avatar" />
-        </a>
-      </li>
-    </ul>
-  </div>
+  <ul class="navbar__list df jcsb aic global__container">
+    <li class="df jcc aic">
+      <a class="navbar__link">
+        <app-icon [icon]="eIcons.avatar" />
+      </a>
+    </li>
+    <li class="df jcc aic">
+      <a class="navbar__link">
+        <app-icon fill="#1C9BEF"/>
+      </a>
+    </li>
+    <li class="df jcc aic">
+      <a class="navbar__link">
+        <app-icon [icon]="eIcons.avatar" />
+      </a>
+    </li>
+  </ul>
   <app-tabs [tabs]="secondBarTabs" />
 </nav>
