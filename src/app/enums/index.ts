@@ -12,6 +12,13 @@ export enum EIcons {
   createPost = 'createPost',
 }
 
+export enum EPagesPaths {
+  home = 'home',
+  search = 'search',
+  notifications = 'notifications',
+  messages = 'messages',
+}
+
 export enum EButton {
   text = 'text',
   ghost = 'ghost',
