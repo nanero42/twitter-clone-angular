@@ -6,4 +6,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './app.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class AppComponent {
+  secondBarTabs = [
+    { id: 0, value: 'For you' },
+    { id: 1, value: 'Following' },
+  ];
+}
