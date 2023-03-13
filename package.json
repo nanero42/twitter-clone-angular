@@ -6,7 +6,8 @@
     "s": "ng serve --port 3000",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "gitinit": "bash ./gitinit.sh"
   },
   "private": true,
   "dependencies": {
