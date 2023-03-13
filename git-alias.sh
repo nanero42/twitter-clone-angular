@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-git config --replace-all alias.ls '!git log --oneline'
 git config --replace-all alias.m '!f() {
   git add . &&
   git commit -m "$1"
