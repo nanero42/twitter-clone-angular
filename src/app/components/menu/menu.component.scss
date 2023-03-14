@@ -8,5 +8,10 @@
   &__list {
     height: 100%;
     padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  &__link_fixed {
+    width: 22px;
   }
 }

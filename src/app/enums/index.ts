@@ -13,7 +13,7 @@ export enum EIcons {
   settings = 'settings',
 }
 
-export enum EPagesPaths {
+export enum EPages {
   home = 'home',
   search = 'search',
   notifications = 'notifications',
