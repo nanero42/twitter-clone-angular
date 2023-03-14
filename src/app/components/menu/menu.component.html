@@ -1,7 +1,10 @@
 <nav class="navbar">
   <ul class="navbar__list df jcsb aic global__container">
     <!-- left -->
-    <li class="df jcfs aic navbar__link_fixed">
+    <li
+      class="df jcfs aic navbar__link_fixed"
+      (click)="toggle()"
+    >
       <a class="navbar__link">
         <app-icon [icon]="eIcons.avatar" />
       </a>

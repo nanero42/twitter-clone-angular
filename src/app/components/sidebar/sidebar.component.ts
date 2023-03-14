@@ -1,5 +1,8 @@
-import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable, Subscription } from 'rxjs';
 import { EKeyboard } from 'src/app/enums';
+import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,29 +10,54 @@ import { EKeyboard } from 'src/app/enums';
   styleUrls: ['./sidebar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit, OnDestroy {
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
     const clickedEl = event.composedPath()[0];
     const isHTMLEl = clickedEl instanceof HTMLElement;
     const isClickedOutside = clickedEl && isHTMLEl && !clickedEl.classList.contains('sidebar');
 
-    isClickedOutside ? this.hide() : this.show();
+    if (isClickedOutside) {
+      this.store.dispatch(toggle());
+    }
   }
 
   @HostListener('window:keyup', ['$event']) keyEvent(event: KeyboardEvent) {
-    event.key === EKeyboard.Escape ? this.hide() : void 0;
+    if (event.key === EKeyboard.Escape) {
+      this.store.dispatch(toggle())
+    }
   }
 
-  style = {
-    'display': 'block',
-    'opacity': 1,
+  sedibar$!: Observable<boolean>;
+
+  style = { 'display': 'none', 'opacity': 0 };
+
+  private _subscriptions: Subscription[] = [];
+
+  constructor(
+    private store: Store<{ sidebar: boolean }>,
+    private cdr: ChangeDetectorRef,
+  ) {}
+
+  ngOnInit(): void {
+    this.sedibar$ = this.store.select('sidebar');
+
+    this._subscriptions.push(
+      this.sedibar$.subscribe((value) => {
+        value ? this.show() : this.hide();
+        this.cdr.detectChanges();
+      }),
+    );
+  }
+
+  ngOnDestroy(): void {
+    this._subscriptions.forEach((s) => s.unsubscribe());
   }
 
   hide() {
-    this.style = { 'display': 'none', 'opacity': 0 }
+    this.style = { 'display': 'none', 'opacity': 0 };
   }
 
   show() {
-    this.style = { 'display': 'block', 'opacity': 1 }
+    this.style = { 'display': 'block', 'opacity': 1 };
   }
 }

@@ -1,6 +1,10 @@
 <div class="app">
-  <app-menu />
-  <router-outlet />
-  <app-navbar></app-navbar>
+  <div class="layers">
+    <app-navbar></app-navbar>
+    <app-menu />
+    <app-sidebar />
+  </div>
+  <main class="main">
+    <router-outlet />
+  </main>
 </div>
-<app-sidebar />

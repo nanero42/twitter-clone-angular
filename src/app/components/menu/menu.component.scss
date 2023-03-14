@@ -1,8 +1,10 @@
 :host { display: contents; }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   background-color: var(--color-bg);
 
   &__list {
