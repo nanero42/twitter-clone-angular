@@ -6,6 +6,7 @@ import { ButtonComponent } from './button/button.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { MenuComponent } from './menu/menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 const exportedComponents = [
   ButtonComponent,
@@ -13,6 +14,7 @@ const exportedComponents = [
   MenuComponent,
   TabsComponent,
   NavbarComponent,
+  SidebarComponent,
 ];
 
 @NgModule({

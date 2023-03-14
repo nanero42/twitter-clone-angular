@@ -27,3 +27,7 @@ export enum EButton {
   raised = 'raised',
   floating = 'floating',
 }
+
+export enum EKeyboard {
+  Escape = 'Escape',
+}

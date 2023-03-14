@@ -1,10 +1,12 @@
 <nav class="navbar">
   <ul class="navbar__list df jcsb aic global__container">
+    <!-- left -->
     <li class="df jcfs aic navbar__link_fixed">
       <a class="navbar__link">
         <app-icon [icon]="eIcons.avatar" />
       </a>
     </li>
+    <!-- center -->
     <li>
       <a class="navbar__link">
         <ng-container [ngSwitch]="currentPath">
@@ -20,6 +22,7 @@
         </ng-container>
       </a>
     </li>
+    <!-- right -->
     <li class="df jcfe aic navbar__link_fixed">
       <ng-container [ngSwitch]="currentPath">
         <ng-container *ngSwitchCase="ePages.search" [ngTemplateOutlet]="settings"></ng-container>
@@ -29,6 +32,7 @@
       </ng-container>
     </li>
   </ul>
+  <!-- tabs -->
   <ng-container [ngSwitch]="currentPath">
     <ng-container *ngSwitchCase="ePages.home">
       <app-tabs [tabs]="tab.home" />
