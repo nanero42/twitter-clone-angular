@@ -1,4 +1,4 @@
-import { EIcons, EPagesPaths } from "../enums";
+import { EIcons, EPages } from "../enums";
 
 export interface ITab {
   id: number;
@@ -9,6 +9,6 @@ export interface INavbarLowItem {
   id: number;
   icon: EIcons;
   iconActive: EIcons;
-  path: EPagesPaths;
+  path: EPages;
   templateName?: EIcons;
 }
