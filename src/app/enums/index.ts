@@ -11,6 +11,7 @@ export enum EIcons {
   messageActive = 'messageActive',
   createPost = 'createPost',
   settings = 'settings',
+  cross = 'cross',
 }
 
 export enum EPages {
