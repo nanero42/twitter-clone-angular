@@ -1,6 +1,6 @@
 :host { display: contents; }
 
-.navbar {
+.menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -9,11 +9,10 @@
 
   &__list {
     height: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
   }
 
-  &__link_fixed {
-    width: 22px;
+  &__item_fixed {
+    width: 50px;
+    height: 50px;
   }
 }
