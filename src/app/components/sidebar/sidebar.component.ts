@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, On
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { EKeyboard } from 'src/app/enums';
+import { IStore } from 'src/app/interfaces';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
@@ -34,7 +35,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   private _subscriptions: Subscription[] = [];
 
   constructor(
-    private store: Store<{ sidebar: boolean }>,
+    private store: Store<{ sidebar: IStore["sidebar"] }>,
     private cdr: ChangeDetectorRef,
   ) {}
 

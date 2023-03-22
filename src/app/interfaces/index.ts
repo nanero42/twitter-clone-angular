@@ -12,3 +12,7 @@ export interface INavbarLowItem {
   path: EPages;
   templateName?: EIcons;
 }
+
+export interface IStore {
+  sidebar: boolean;
+}
