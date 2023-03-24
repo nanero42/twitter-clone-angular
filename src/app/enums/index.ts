@@ -12,6 +12,11 @@ export enum EIcons {
   createPost = 'createPost',
   settings = 'settings',
   cross = 'cross',
+  add = 'add',
+  topics = 'topics',
+  bookmarks = 'bookmarks',
+  lists = 'lists',
+  twitterCircle = 'twitterCircle',
 }
 
 export enum EPages {

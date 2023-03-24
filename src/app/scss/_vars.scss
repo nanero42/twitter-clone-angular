@@ -3,10 +3,24 @@
   --color-main: #1C9BEF;
   --color-hover: #E0E0E0;
   --color-active: rgb(185 190 194);
-  --color-border: #EFF3F4;
+
+  --color-border-thin: #EFF3F4;
+  --color-border-extra-light: #CFD9DD;
+
   --color-text: #526371;
   --color-text-black: #000;
 
   --size-navbar-height: 42px;
   --size-tabs-item-height: 50px;
 }
+
+// css color naming gradation
+// 100 - Thin
+// 200 - Extra Light, Ultra Light
+// 300 - Light
+// 400 - Normal, Book, Regular
+// 500 - Medium
+// 600 - Semi Bold, Demi Bold
+// 700 - Bold
+// 800 - Extra Bold, Ultra Bold
+// 900 - Black, Heavy

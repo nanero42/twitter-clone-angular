@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
-import { EKeyboard } from 'src/app/enums';
+import { EIcons, EKeyboard } from 'src/app/enums';
 import { IStore } from 'src/app/interfaces';
 import { toggle } from 'src/store/sidebar/actions';
 
@@ -12,6 +12,8 @@ import { toggle } from 'src/store/sidebar/actions';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidebarComponent implements OnInit, OnDestroy {
+  private _subscriptions: Subscription[] = [];
+
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
     const clickedEl = event.composedPath()[0];
     const isHTMLEl = clickedEl instanceof HTMLElement;
@@ -21,7 +23,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
       this.store.dispatch(toggle());
     }
   }
-
   @HostListener('window:keyup', ['$event']) keyEvent(event: KeyboardEvent) {
     if (event.key === EKeyboard.Escape) {
       this.store.dispatch(toggle())
@@ -29,10 +30,8 @@ export class SidebarComponent implements OnInit, OnDestroy {
   }
 
   sedibar$!: Observable<boolean>;
-
   style = { 'display': 'none', 'opacity': 0 };
-
-  private _subscriptions: Subscription[] = [];
+  eIcons = EIcons;
 
   constructor(
     private store: Store<{ sidebar: IStore["sidebar"] }>,
