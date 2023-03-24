@@ -18,11 +18,15 @@ const exportedComponents = [
 ];
 
 @NgModule({
-  declarations: exportedComponents,
-  exports: exportedComponents,
+  declarations: [
+    ...exportedComponents,
+  ],
   imports: [
     CommonModule,
     RouterModule,
+  ],
+  exports: [
+    ...exportedComponents,
   ],
 })
 export class ComponentsModule { }

@@ -16,3 +16,8 @@ export interface INavbarLowItem {
 export interface IStore {
   sidebar: boolean;
 }
+
+export interface IAccordionItem {
+  id: number;
+  title :string;
+}

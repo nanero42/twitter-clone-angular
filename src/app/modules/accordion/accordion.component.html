@@ -1,0 +1,25 @@
+<div class="accordion">
+  <div *ngFor="let item of items" class="accordion__item p16">
+    <!-- <app-accordion-item
+      (clicl)="toggle(item.id)"
+      [title]="item.title"
+      [classes]="openedItem.includes(item.id) ? rotateIcon(): ''"
+      [icon]="eIcons.arrowDown"
+      [iconColor]="openedItem.includes(item.id) ? '#1C9BEF' : '#000'"
+    >
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nam repellendus in neque esse velit maxime architecto soluta assumenda culpa blanditiis ducimus minima delectus ad quo exercitationem quasi, iste sit.
+      </p>
+    </app-accordion-item> -->
+
+    <div class="accordion__item-container df jcsb aic" (click)="toggle(item.id)">
+      <div class="accordion__item-title">{{ item.title }}</div>
+      <div class="accordion__item-icon" [ngClass]="openedItem.includes(item.id) ? rotateIcon(): ''">
+        <app-icon [icon]="eIcons.arrowDown" [fill]="openedItem.includes(item.id) ? '#1C9BEF' : '#000'"/>
+      </div>
+    </div>
+    <div *ngIf="openedItem.includes(item.id) ? true : false" class="accordion__item-content pt16">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nam repellendus in neque esse velit maxime architecto soluta assumenda culpa blanditiis ducimus minima delectus ad quo exercitationem quasi, iste sit.
+    </div>
+  </div>
+</div>

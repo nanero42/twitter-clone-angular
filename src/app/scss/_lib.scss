@@ -1,6 +1,22 @@
+// width
+
+.w100 {
+  width: 100%;
+}
+
+// height
+
+.h50 {
+  height: 50px;
+}
+
+// cursor
+
 .cup {
   cursor: pointer;
 }
+
+// flex
 
 .df {
   display: flex;
@@ -34,9 +50,7 @@
   flex-direction: column;
 }
 
-.w100 {
-  width: 100%;
-}
+// margin
 
 .m0a {
   margin: 0 auto;
@@ -58,9 +72,7 @@
   margin-left: 16px;
 }
 
-.h50 {
-  height: 50px;
-}
+// padding
 
 .p16 {
   padding: 16px;
@@ -80,4 +92,10 @@
 
 .pl16 {
   padding-left: 16px;
+}
+
+// animation
+
+.rotate180 {
+  transform: rotate(180deg);
 }

@@ -17,6 +17,7 @@ export enum EIcons {
   bookmarks = 'bookmarks',
   lists = 'lists',
   twitterCircle = 'twitterCircle',
+  arrowDown = 'arrowDown',
 }
 
 export enum EPages {
@@ -35,4 +36,9 @@ export enum EButton {
 
 export enum EKeyboard {
   Escape = 'Escape',
+}
+
+export enum EAccordionOpenStrategy {
+  one = 'one',
+  many = 'many',
 }
