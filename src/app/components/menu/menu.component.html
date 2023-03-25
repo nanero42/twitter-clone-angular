@@ -1,42 +1,8 @@
 <nav class="menu">
   <ul class="menu__list df jcsb aic">
-    <!-- left -->
-    <li
-      class="df jcc aic menu__item_fixed"
-      (click)="toggle()"
-    >
-      <a class="menu__link">
-        <app-icon [icon]="eIcons.avatar" />
-      </a>
-    </li>
-    <!-- center -->
-    <li>
-      <a class="menu__link">
-        <ng-container [ngSwitch]="currentPath">
-          <ng-container *ngSwitchCase="ePages.search">
-            SEARCH AUTOCOMPLETE
-          </ng-container>
-          <ng-container *ngSwitchCase="ePages.notifications">
-            <h2>Notifications</h2>
-          </ng-container>
-          <ng-container *ngSwitchCase="ePages.messages">
-            <h2>Messages</h2>
-          </ng-container>
-          <ng-container *ngSwitchDefault>
-            <app-icon />
-          </ng-container>
-        </ng-container>
-      </a>
-    </li>
-    <!-- right -->
-    <li class="df jcc aic menu__item_fixed">
-      <ng-container [ngSwitch]="currentPath">
-        <ng-container *ngSwitchCase="ePages.search" [ngTemplateOutlet]="settings"></ng-container>
-        <ng-container *ngSwitchCase="ePages.notifications" [ngTemplateOutlet]="settings"></ng-container>
-        <ng-container *ngSwitchCase="ePages.messages" [ngTemplateOutlet]="settings"></ng-container>
-        <ng-container *ngSwitchDefault></ng-container>
-      </ng-container>
-    </li>
+    <app-menu-item-left />
+    <app-menu-item-center [currentPath]="currentPath" />
+    <app-menu-item-right [currentPath]="currentPath" [settingsTemplateRef]="settings" />
   </ul>
   <!-- tabs -->
   <ng-container [ngSwitch]="currentPath">
@@ -50,8 +16,4 @@
   </ng-container>
 </nav>
 
-<ng-template #settings>
-  <a class="menu__link">
-    <app-icon [icon]="eIcons.settings" />
-  </a>
-</ng-template>
+<ng-template #settings><a><app-icon [icon]="eIcons.settings" /></a></ng-template>

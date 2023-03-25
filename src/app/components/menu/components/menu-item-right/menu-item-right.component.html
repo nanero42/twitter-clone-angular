@@ -1,0 +1,8 @@
+<li class="df jcc aic w50 h50">
+  <ng-container [ngSwitch]="currentPath">
+    <ng-container *ngSwitchCase="ePages.search" [ngTemplateOutlet]="settingsTemplateRef"></ng-container>
+    <ng-container *ngSwitchCase="ePages.notifications" [ngTemplateOutlet]="settingsTemplateRef"></ng-container>
+    <ng-container *ngSwitchCase="ePages.messages" [ngTemplateOutlet]="settingsTemplateRef"></ng-container>
+    <ng-container *ngSwitchDefault></ng-container>
+  </ng-container>
+</li>

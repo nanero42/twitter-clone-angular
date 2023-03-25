@@ -1,0 +1,18 @@
+<li>
+  <a>
+    <ng-container [ngSwitch]="currentPath">
+      <ng-container *ngSwitchCase="ePages.search">
+        SEARCH AUTOCOMPLETE
+      </ng-container>
+      <ng-container *ngSwitchCase="ePages.notifications">
+        <h2>Notifications</h2>
+      </ng-container>
+      <ng-container *ngSwitchCase="ePages.messages">
+        <h2>Messages</h2>
+      </ng-container>
+      <ng-container *ngSwitchDefault>
+        <app-icon />
+      </ng-container>
+    </ng-container>
+  </a>
+</li>
