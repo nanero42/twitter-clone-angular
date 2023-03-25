@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component, Input, TemplateRef } from '@angular
 import { EPages } from 'src/app/enums';
 
 @Component({
-  selector: 'app-menu-item-right',
-  templateUrl: './menu-item-right.component.html',
-  styleUrls: ['./menu-item-right.component.scss'],
+  selector: 'app-settings-bar-item-right',
+  templateUrl: './settings-bar-item-right.component.html',
+  styleUrls: ['./settings-bar-item-right.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MenuItemRightComponent {
+export class SettingsBarItemRightComponent {
   @Input() currentPath!: string;
   @Input() settingsTemplateRef!: TemplateRef<HTMLElement>;
 

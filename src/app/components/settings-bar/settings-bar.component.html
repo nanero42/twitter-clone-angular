@@ -1,8 +1,8 @@
 <nav class="menu">
   <ul class="menu__list df jcsb aic">
-    <app-menu-item-left />
-    <app-menu-item-center [currentPath]="currentPath" />
-    <app-menu-item-right [currentPath]="currentPath" [settingsTemplateRef]="settings" />
+    <app-settings-bar-item-left />
+    <app-settings-bar-item-center [currentPath]="currentPath" />
+    <app-settings-bar-item-right [currentPath]="currentPath" [settingsTemplateRef]="settings" />
   </ul>
   <!-- tabs -->
   <ng-container [ngSwitch]="currentPath">

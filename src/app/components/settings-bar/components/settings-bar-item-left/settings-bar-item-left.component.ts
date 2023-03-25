@@ -4,12 +4,12 @@ import { EIcons } from 'src/app/enums';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'app-menu-item-left',
-  templateUrl: './menu-item-left.component.html',
-  styleUrls: ['./menu-item-left.component.scss'],
+  selector: 'app-settings-bar-item-left',
+  templateUrl: './settings-bar-item-left.component.html',
+  styleUrls: ['./settings-bar-item-left.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MenuItemLeftComponent {
+export class SettingsBarItemLeftComponent {
   @Output() toggle = new EventEmitter(false);
 
   eIcons = EIcons;

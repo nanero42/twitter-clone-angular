@@ -1,18 +1,18 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { Subscription } from 'rxjs';
 import { EIcons, EPages } from 'src/app/enums';
 import { ITab } from 'src/app/interfaces';
-import { NavigationEnd, Router } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
 import { getFirstUrlStartingWithSlash } from 'src/providers/regexp';
-import { Store } from '@ngrx/store';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  selector: 'app-settings-bar',
+  templateUrl: './settings-bar.component.html',
+  styleUrls: ['./settings-bar.component.scss']
 })
-export class MenuComponent implements OnInit, OnDestroy {
+export class SettingsBarComponent implements OnInit, OnDestroy {
   @Input() secondBarTabs!: ITab[];
 
   routerListener$ = this.router.events;
