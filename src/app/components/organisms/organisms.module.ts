@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MenuComponent } from './menu/menu.component';
+import { MoleculesModule } from '../molecules/molecules.module';
 
-const exportedOrganisms: any = [
-
+const exportedOrganisms = [
+  MenuComponent,
 ];
 
 @NgModule({
@@ -10,7 +12,8 @@ const exportedOrganisms: any = [
     ...exportedOrganisms,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MoleculesModule,
   ],
   exports: [
     ...exportedOrganisms,
