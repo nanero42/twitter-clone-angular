@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { EIcons, EPages } from 'src/app/enums';
 import { INavbarLowItem } from 'src/app/interfaces';
@@ -21,7 +21,10 @@ export class NavbarComponent implements OnInit {
     { id: 3, icon: EIcons.message, iconActive: EIcons.messageActive, path: EPages.messages },
   ];
 
-  constructor(private location: Location) {}
+  constructor(
+    private location: Location,
+    private cdr: ChangeDetectorRef,
+  ) {}
 
   ngOnInit(): void {
     this.location.onUrlChange((path: string) => this._trackActiveElementIdChanges(path));
@@ -31,4 +34,7 @@ export class NavbarComponent implements OnInit {
     this.activeElementId$.next(this.items.find((item) => path.includes(item.path))?.id || 0);
   }
 
+  onActiveElementId(id: number) {
+    this.activeElementId$.next(id);
+  }
 }
