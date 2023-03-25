@@ -1,0 +1,13 @@
+:host { display: contents; }
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--color-bg);
+
+  &__list {
+    height: 100%;
+  }
+}

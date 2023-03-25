@@ -1,9 +1,0 @@
-<div class="accordion__item-container df jcsb aic pr16 pl16 h50" (click)="toggle(id)">
-  <div class="accordion__item-title fwb">{{ title }}</div>
-  <div class="accordion__item-icon" [ngClass]="openedItem.includes(id) ? rotateIcon(): ''">
-    <app-icon [icon]="icon ? icon : eIcons.arrowDown" [fill]="openedItem.includes(id) ? '#1C9BEF' : '#000'"/>
-  </div>
-</div>
-<div *ngIf="openedItem.includes(id) ? true : false" class="accordion__item-content p16">
-  <ng-content></ng-content>
-</div>

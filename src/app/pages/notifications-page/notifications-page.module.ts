@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { NotificationsPageRoutingModule } from './notifications-page-routing.module';
 import { NotificationsPageComponent } from './notifications-page.component';
-import { ComponentsModule } from 'src/app/components/components.module';
 
 
 @NgModule({
@@ -13,7 +12,6 @@ import { ComponentsModule } from 'src/app/components/components.module';
   imports: [
     CommonModule,
     NotificationsPageRoutingModule,
-    ComponentsModule,
   ]
 })
 export class NotificationsPageModule { }

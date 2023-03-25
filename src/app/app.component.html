@@ -1,8 +1,6 @@
 <div class="app">
   <div class="layers">
-    <app-navbar></app-navbar>
-    <app-menu />
-    <app-sidebar [accordionItems]="accordionItems" />
+    <organism-menu [accordionItems]="accordionItems" />
   </div>
   <main class="main">
     <router-outlet />
