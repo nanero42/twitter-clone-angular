@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { EIcons, EPages } from 'src/app/enums';
@@ -47,7 +47,7 @@ export class SettingsBarComponent implements OnInit, OnDestroy {
         const isNavigationEnd = v instanceof NavigationEnd;
 
         if (isNavigationEnd) {
-          this.currentPath = getFirstUrlStartingWithSlash(v.url);
+          this.currentPath = getFirstUrlStartingWithSlash(v.urlAfterRedirects);
         }
       }),
     );
