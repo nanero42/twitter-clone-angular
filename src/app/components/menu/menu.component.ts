@@ -2,8 +2,10 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { EIcons, EPages } from 'src/app/enums';
 import { ITab } from 'src/app/interfaces';
 import { NavigationEnd, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { getFirstUrlStartingWithSlash } from 'src/providers/regexp';
+import { Store } from '@ngrx/store';
+import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
   selector: 'app-menu',
@@ -34,7 +36,10 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   private _subscriptions: Subscription[] = [];
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private store: Store<{ sidebar: boolean }>
+  ) {}
 
   ngOnInit(): void {
     this._subscriptions.push(
@@ -50,5 +55,9 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this._subscriptions.forEach((s) => s.unsubscribe());
+  }
+
+  toggle() {
+    this.store.dispatch(toggle());
   }
 }

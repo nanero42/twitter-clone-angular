@@ -1,6 +1,22 @@
+// width
+
+.w100 {
+  width: 100%;
+}
+
+// height
+
+.h50 {
+  height: 50px;
+}
+
+// cursor
+
 .cup {
   cursor: pointer;
 }
+
+// flex
 
 .df {
   display: flex;
@@ -34,9 +50,7 @@
   flex-direction: column;
 }
 
-.w100 {
-  width: 100%;
-}
+// margin
 
 .m0a {
   margin: 0 auto;
@@ -48,4 +62,46 @@
 
 .mra {
   margin-right: auto;
+}
+
+.mr16 {
+  margin-right: 16px;
+}
+
+.ml16 {
+  margin-left: 16px;
+}
+
+// padding
+
+.p16 {
+  padding: 16px;
+}
+
+.pt8 {
+  padding-top: 8px;
+}
+
+.pt16 {
+  padding-top: 16px;
+}
+
+.pr16 {
+  padding-right: 16px;
+}
+
+.pl16 {
+  padding-left: 16px;
+}
+
+// animation
+
+.r180 {
+  transform: rotate(180deg);
+}
+
+// font
+
+.fwb {
+  font-weight: bold;
 }

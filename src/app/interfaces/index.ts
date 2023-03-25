@@ -1,4 +1,4 @@
-import { EIcons, EPages } from "../enums";
+import { EAccordionOpenStrategy, EIcons, EPages } from "../enums";
 
 export interface ITab {
   id: number;
@@ -11,4 +11,19 @@ export interface INavbarLowItem {
   iconActive: EIcons;
   path: EPages;
   templateName?: EIcons;
+}
+
+export interface IStore {
+  sidebar: boolean;
+  accordion: IAccordionState;
+}
+
+export interface IAccordionItem {
+  id: number;
+  title :string;
+}
+
+export interface IAccordionState {
+  openedItems: number[];
+  openStrategy: EAccordionOpenStrategy;
 }

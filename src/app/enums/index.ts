@@ -11,6 +11,13 @@ export enum EIcons {
   messageActive = 'messageActive',
   createPost = 'createPost',
   settings = 'settings',
+  cross = 'cross',
+  add = 'add',
+  topics = 'topics',
+  bookmarks = 'bookmarks',
+  lists = 'lists',
+  twitterCircle = 'twitterCircle',
+  arrowDown = 'arrowDown',
 }
 
 export enum EPages {
@@ -25,4 +32,13 @@ export enum EButton {
   ghost = 'ghost',
   raised = 'raised',
   floating = 'floating',
+}
+
+export enum EKeyboard {
+  Escape = 'Escape',
+}
+
+export enum EAccordionOpenStrategy {
+  one = 'one',
+  many = 'many',
 }
