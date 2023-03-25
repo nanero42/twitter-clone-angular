@@ -49,8 +49,21 @@
         <li class="sidebar__nav-item sidebar__nav-item_delimeter df aic mr16 ml16"></li>
       </ul>
     </nav>
-    <div class="sidebar__other">
-      <!-- create accordion component -->
+    <div *ngIf="accordionItems?.length" class="sidebar__other">
+      <app-accordion
+        [openStrategy]="eAccordionOpenStrategy.one"
+      >
+        <app-accordion-item
+          *ngFor="let item of accordionItems"
+          [id]="item.id"
+          [title]="item.title"
+          [icon]="eIcons.arrowDown"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem voluptatum ratione quia praesentium voluptate consequuntur autem assumenda eligendi illo eius, in rerum, tempora iste perferendis ab cum eveniet eum accusamus.
+          </p>
+        </app-accordion-item>
+      </app-accordion>
     </div>
   </div>
 </div>

@@ -1,25 +1,24 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
-import { EIcons, EKeyboard } from 'src/app/enums';
-import { IStore } from 'src/app/interfaces';
+import { EAccordionOpenStrategy, EIcons, EKeyboard } from 'src/app/enums';
+import { IAccordionItem, IAccordionState, IStore } from 'src/app/interfaces';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidebarComponent implements OnInit, OnDestroy {
   private _subscriptions: Subscription[] = [];
 
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
-    const clickedEl = event.composedPath()[0];
-    const isHTMLEl = clickedEl instanceof HTMLElement;
-    const isClickedOutside = clickedEl && isHTMLEl && !clickedEl.classList.contains('sidebar');
+    const clickedEls = event.composedPath() as HTMLElement[];
+    const isClickedInside = clickedEls?.length && clickedEls.some((el) => el?.classList?.contains('sidebar'));
 
-    if (isClickedOutside) {
+    if (!isClickedInside) {
       this.store.dispatch(toggle());
     }
   }
@@ -29,12 +28,17 @@ export class SidebarComponent implements OnInit, OnDestroy {
     }
   }
 
+  @Input() accordionItems!: IAccordionItem[];
+
   sedibar$!: Observable<boolean>;
+  accordion$!: Observable<IAccordionState>;
+
   style = { 'display': 'none', 'opacity': 0 };
   eIcons = EIcons;
+  eAccordionOpenStrategy = EAccordionOpenStrategy;
 
   constructor(
-    private store: Store<{ sidebar: IStore["sidebar"] }>,
+    private store: Store<{ sidebar: IStore["sidebar"], accordion: IStore["accordion"] }>,
     private cdr: ChangeDetectorRef,
   ) {}
 
