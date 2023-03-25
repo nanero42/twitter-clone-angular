@@ -11,6 +11,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionItemComponent } from './accordion/components/accordion-item/accordion-item.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { NavbarItemComponent } from './navbar/navbar-item/navbar-item.component';
 
 const exportedMolecules = [
   SettingsBarComponent,
@@ -27,6 +28,7 @@ const exportedMolecules = [
     SettingsBarItemRightComponent,
     SettingsBarItemLeftComponent,
     AccordionItemComponent,
+    NavbarItemComponent,
   ],
   imports: [
     CommonModule,
