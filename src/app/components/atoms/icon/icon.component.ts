@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { EIcons } from 'src/app/enums';
 
 @Component({
-  selector: 'app-icon',
+  selector: 'atom-icon',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })

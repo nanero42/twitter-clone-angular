@@ -10,7 +10,7 @@
     >
       <a class="navbar__link df jcc aic">
         <div class="navbar__container">
-          <app-icon [icon]="eIcon[activeElementId$.value === item.id ? item.iconActive : item.icon]"/>
+          <atom-icon [icon]="eIcon[activeElementId$.value === item.id ? item.iconActive : item.icon]"/>
           <ng-container [ngSwitch]="item.templateName">
             <ng-container *ngSwitchCase="eIcon.notification" [ngTemplateOutlet]="notification"></ng-container>
             <ng-container *ngSwitchCase="eIcon.home" [ngTemplateOutlet]="home"></ng-container>
