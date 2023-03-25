@@ -4,7 +4,7 @@ import { EIcons } from 'src/app/enums';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'app-settings-bar-item-left',
+  selector: 'molecula-settings-bar-item-left',
   templateUrl: './settings-bar-item-left.component.html',
   styleUrls: ['./settings-bar-item-left.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

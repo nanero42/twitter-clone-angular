@@ -50,10 +50,10 @@
       </ul>
     </nav>
     <div *ngIf="accordionItems?.length" class="sidebar__other">
-      <app-accordion
+      <molecula-accordion
         [openStrategy]="eAccordionOpenStrategy.one"
       >
-        <app-accordion-item
+        <molecula-accordion-item
           *ngFor="let item of accordionItems"
           [id]="item.id"
           [title]="item.title"
@@ -62,8 +62,8 @@
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem voluptatum ratione quia praesentium voluptate consequuntur autem assumenda eligendi illo eius, in rerum, tempora iste perferendis ab cum eveniet eum accusamus.
           </p>
-        </app-accordion-item>
-      </app-accordion>
+        </molecula-accordion-item>
+      </molecula-accordion>
     </div>
   </div>
 </div>

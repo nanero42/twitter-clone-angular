@@ -6,7 +6,7 @@ import { IAccordionItem, IAccordionState, IStore } from 'src/app/interfaces';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'molecula-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

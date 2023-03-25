@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, TemplateRef } from '@angular
 import { EPages } from 'src/app/enums';
 
 @Component({
-  selector: 'app-settings-bar-item-right',
+  selector: 'molecula-settings-bar-item-right',
   templateUrl: './settings-bar-item-right.component.html',
   styleUrls: ['./settings-bar-item-right.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

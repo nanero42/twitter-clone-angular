@@ -8,7 +8,7 @@ import { getFirstUrlStartingWithSlash } from 'src/providers/regexp';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'app-settings-bar',
+  selector: 'molecula-settings-bar',
   templateUrl: './settings-bar.component.html',
   styleUrls: ['./settings-bar.component.scss']
 })

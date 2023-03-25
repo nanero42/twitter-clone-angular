@@ -3,7 +3,7 @@ import { EAccordionOpenStrategy, EIcons } from 'src/app/enums';
 import { removeItem } from 'src/providers/utils';
 
 @Component({
-  selector: 'app-accordion-item',
+  selector: 'molecula-accordion-item',
   templateUrl: './accordion-item.component.html',
   styleUrls: ['./accordion-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

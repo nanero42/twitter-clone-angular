@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { EAccordionOpenStrategy } from 'src/app/enums';
 
 @Component({
-  selector: 'app-accordion',
+  selector: 'molecula-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

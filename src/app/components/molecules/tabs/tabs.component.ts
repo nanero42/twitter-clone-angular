@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { ITab } from 'src/app/interfaces';
 
 @Component({
-  selector: 'app-tabs',
+  selector: 'molecula-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

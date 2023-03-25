@@ -5,7 +5,7 @@ import { EIcons, EPages } from 'src/app/enums';
 import { INavbarLowItem } from 'src/app/interfaces';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'molecula-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
