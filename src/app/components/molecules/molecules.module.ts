@@ -12,6 +12,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionItemComponent } from './accordion/components/accordion-item/accordion-item.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { NavbarItemComponent } from './navbar/navbar-item/navbar-item.component';
+import { ListComponent } from './list/list.component';
 
 const exportedMolecules = [
   SettingsBarComponent,
@@ -19,16 +20,21 @@ const exportedMolecules = [
   NavbarComponent,
   SidebarComponent,
   AccordionComponent,
+  ListComponent,
+];
+
+const molecules = [
+  SettingsBarItemCenterComponent,
+  SettingsBarItemRightComponent,
+  SettingsBarItemLeftComponent,
+  AccordionItemComponent,
+  NavbarItemComponent,
 ];
 
 @NgModule({
   declarations: [
     ...exportedMolecules,
-    SettingsBarItemCenterComponent,
-    SettingsBarItemRightComponent,
-    SettingsBarItemLeftComponent,
-    AccordionItemComponent,
-    NavbarItemComponent,
+    ...molecules,
   ],
   imports: [
     CommonModule,

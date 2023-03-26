@@ -1,0 +1,14 @@
+:host { display: contents; }
+
+.sidebar {
+
+  &__nav-item {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__nav-item_delimeter {
+    height: 1px;
+    background: var(--color-border-thin);
+  }
+}

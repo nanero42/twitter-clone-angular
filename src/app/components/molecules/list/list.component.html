@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of items" class="sidebar__nav-item df aic pr16 pl16 h50">
+    <div class="pr16"><atom-icon [icon]="item.icon" /></div>
+    <span>{{ item.text }}</span>
+  </li>
+  <li *ngIf="useEndLine" class="sidebar__nav-item sidebar__nav-item_delimeter df aic mr16 ml16"></li>
+</ul>

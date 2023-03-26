@@ -24,32 +24,8 @@
         <span class="sidebar__followers">0 followers</span>
       </div>
     </div>
-    <nav class="sidebar__nav">
-      <ul class="sidebar__nav-list">
-        <li class="sidebar__nav-item df aic pr16 pl16 h50">
-          <div class="pr16"><atom-icon [icon]="eIcons.avatar" /></div>
-          <span class="sidebar__nav-item-text">Profile</span>
-        </li>
-        <li class="sidebar__nav-item df aic pr16 pl16 h50">
-          <div class="pr16"><atom-icon [icon]="eIcons.topics" /></div>
-          <span class="sidebar__nav-item-text">Topics</span>
-        </li>
-        <li class="sidebar__nav-item df aic pr16 pl16 h50">
-          <div class="pr16"><atom-icon [icon]="eIcons.bookmarks" /></div>
-          <span class="sidebar__nav-item-text">Bookmarks</span>
-        </li>
-        <li class="sidebar__nav-item df aic pr16 pl16 h50">
-          <div class="pr16"><atom-icon [icon]="eIcons.lists" /></div>
-          <span class="sidebar__nav-item-text">Lists</span>
-        </li>
-        <li class="sidebar__nav-item df aic pr16 pl16 h50">
-          <div class="pr16"><atom-icon [icon]="eIcons.twitterCircle" /></div>
-          <span class="sidebar__nav-item-text">Twitter Circle</span>
-        </li>
-        <li class="sidebar__nav-item sidebar__nav-item_delimeter df aic mr16 ml16"></li>
-      </ul>
-    </nav>
-    <div *ngIf="accordionItems?.length" class="sidebar__other">
+    <molecula-list [items]="listItems" />
+    <div *ngIf="accordionItems?.length">
       <molecula-accordion
         [openStrategy]="eAccordionOpenStrategy.one"
       >

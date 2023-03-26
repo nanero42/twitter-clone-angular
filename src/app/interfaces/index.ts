@@ -27,3 +27,9 @@ export interface IAccordionState {
   openedItems: number[];
   openStrategy: EAccordionOpenStrategy;
 }
+
+export interface IListItem {
+  id: number;
+  text: string;
+  icon: EIcons;
+}
