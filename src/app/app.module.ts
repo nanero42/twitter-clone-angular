@@ -4,7 +4,7 @@ import { StoreModule } from '@ngrx/store';
 import { sidebarReducer } from 'src/store/sidebar/reducer';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OrganismsModule } from './components/organisms/organisms.module';
+import { TemplatesModule } from './templates/templates.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { OrganismsModule } from './components/organisms/organisms.module';
     StoreModule.forRoot({
       sidebar: sidebarReducer,
     }),
-    OrganismsModule,
+    TemplatesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

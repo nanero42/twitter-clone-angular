@@ -1,7 +1,8 @@
 <div class="app">
   <div class="layers">
-    <organism-navbars />
-    <organism-sidebar [accordionItems]="accordionItems" />
+    <template-navbars
+      [accordionItems]="accordionItems"
+    />
   </div>
   <main class="main">
     <router-outlet />
