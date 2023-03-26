@@ -6,12 +6,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 const exportedOrganisms = [
   MenuComponent,
+  SidebarComponent,
 ];
 
 @NgModule({
   declarations: [
     ...exportedOrganisms,
-    SidebarComponent,
   ],
   imports: [
     CommonModule,
