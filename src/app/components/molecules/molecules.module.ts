@@ -13,6 +13,7 @@ import { AccordionItemComponent } from './accordion/components/accordion-item/ac
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { NavbarItemComponent } from './navbar/navbar-item/navbar-item.component';
 import { ListComponent } from './list/list.component';
+import { AccountInfoComponent } from './account-info/account-info.component';
 
 const exportedMolecules = [
   SettingsBarComponent,
@@ -21,6 +22,7 @@ const exportedMolecules = [
   SidebarComponent,
   AccordionComponent,
   ListComponent,
+  AccountInfoComponent,
 ];
 
 const molecules = [
