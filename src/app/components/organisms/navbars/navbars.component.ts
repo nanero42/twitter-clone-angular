@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'organism-menu',
+  selector: 'organism-navbars',
   templateUrl: './navbars.component.html',
   styleUrls: ['./navbars.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
