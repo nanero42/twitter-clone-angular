@@ -1,17 +1,17 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { EAccordionOpenStrategy, EIcons, EKeyboard } from 'src/app/enums';
-import { IAccordionItem, IAccordionState, IStore } from 'src/app/interfaces';
+import { IAccordionItem, IAccordionState, IListItem, IStore } from 'src/app/interfaces';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'molecula-sidebar',
+  selector: 'organism-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SidebarComponent implements OnInit, OnDestroy {
+export class SidebarComponent {
   private _subscriptions: Subscription[] = [];
 
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
@@ -36,6 +36,13 @@ export class SidebarComponent implements OnInit, OnDestroy {
   style = { 'display': 'none', 'opacity': 0 };
   eIcons = EIcons;
   eAccordionOpenStrategy = EAccordionOpenStrategy;
+  listItems: IListItem[] = [
+    { id: 0, text: 'Profile', icon: this.eIcons.avatar },
+    { id: 1, text: 'Topics', icon: this.eIcons.topics },
+    { id: 2, text: 'Bookmarks', icon: this.eIcons.bookmarks },
+    { id: 3, text: 'Lists', icon: this.eIcons.lists },
+    { id: 4, text: 'Twitter Circle', icon: this.eIcons.twitterCircle },
+  ]
 
   constructor(
     private store: Store<{ sidebar: IStore["sidebar"], accordion: IStore["accordion"] }>,
