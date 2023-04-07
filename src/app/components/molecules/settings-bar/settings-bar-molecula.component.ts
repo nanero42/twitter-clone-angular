@@ -8,11 +8,11 @@ import { getFirstUrlStartingWithSlash } from 'src/providers/regexp';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'molecula-settings-bar',
-  templateUrl: './settings-bar.component.html',
-  styleUrls: ['./settings-bar.component.scss']
+  selector: 'app-settings-bar-molecula',
+  templateUrl: './settings-bar-molecula.component.html',
+  styleUrls: ['./settings-bar-molecula.component.scss']
 })
-export class SettingsBarComponent implements OnInit, OnDestroy {
+export class SettingsBarMoleculaComponent implements OnInit, OnDestroy {
   @Input() secondBarTabs!: ITab[];
 
   routerListener$ = this.router.events;

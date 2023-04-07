@@ -5,12 +5,12 @@ import { EIcons, EPages } from 'src/providers/enums';
 import { INavbarLowItem } from 'src/providers/interfaces';
 
 @Component({
-  selector: 'molecula-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
+  selector: 'app-navbar-molecula',
+  templateUrl: './navbar-molecula.component.html',
+  styleUrls: ['./navbar-molecula.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavbarComponent implements OnInit {
+export class NavbarMoleculaComponent implements OnInit {
   activeElementId$ = new BehaviorSubject(0);
 
   eIcon = EIcons;

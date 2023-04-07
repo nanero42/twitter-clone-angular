@@ -4,12 +4,12 @@ import { EIcons } from 'src/providers/enums';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'molecula-settings-bar-item-left',
-  templateUrl: './settings-bar-item-left.component.html',
-  styleUrls: ['./settings-bar-item-left.component.scss'],
+  selector: 'app-settings-bar-item-left-molecula',
+  templateUrl: './settings-bar-item-left-molecula.component.html',
+  styleUrls: ['./settings-bar-item-left-molecula.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SettingsBarItemLeftComponent {
+export class SettingsBarItemLeftMoleculaComponent {
   @Output() toggle = new EventEmitter(false);
 
   eIcons = EIcons;

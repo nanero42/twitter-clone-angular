@@ -6,12 +6,12 @@ import { IStore } from 'src/providers/interfaces';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'molecula-account-info',
-  templateUrl: './account-info.component.html',
-  styleUrls: ['./account-info.component.scss'],
+  selector: 'app-account-info-molecula',
+  templateUrl: './account-info-molecula.component.html',
+  styleUrls: ['./account-info-molecula.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AccountInfoComponent implements OnInit {
+export class AccountInfoMoleculaComponent implements OnInit {
   eIcons = EIcons;
 
   sidebar$!: Observable<boolean>;

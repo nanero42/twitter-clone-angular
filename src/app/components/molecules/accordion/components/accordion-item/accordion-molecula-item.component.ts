@@ -3,12 +3,12 @@ import { EAccordionOpenStrategy, EIcons } from 'src/providers/enums';
 import { removeItem } from 'src/providers/utils';
 
 @Component({
-  selector: 'molecula-accordion-item',
-  templateUrl: './accordion-item.component.html',
-  styleUrls: ['./accordion-item.component.scss'],
+  selector: 'app-accordion-molecula-item',
+  templateUrl: './accordion-molecula-item.component.html',
+  styleUrls: ['./accordion-molecula-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AccordionItemComponent {
+export class AccordionMoleculaItemComponent {
   @Input() id!: number;
   @Input() title = '';
   @Input() icon = EIcons.arrowDown;

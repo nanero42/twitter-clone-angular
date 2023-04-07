@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { ITab } from 'src/providers/interfaces';
 
 @Component({
-  selector: 'molecula-tabs',
-  templateUrl: './tabs.component.html',
-  styleUrls: ['./tabs.component.scss'],
+  selector: 'app-tabs-molecula',
+  templateUrl: './tabs-molecula.component.html',
+  styleUrls: ['./tabs-molecula.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TabsComponent implements OnInit {
+export class TabsMoleculaComponent implements OnInit {
   @Input()
   get tabs(): ITab[] { return this._copiedTabs };
   set tabs(values: ITab[]) { this._copiedTabs = values };

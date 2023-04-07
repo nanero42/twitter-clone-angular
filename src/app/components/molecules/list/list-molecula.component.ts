@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { IListItem } from 'src/providers/interfaces';
 
 @Component({
-  selector: 'molecula-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
+  selector: 'app-list-molecula',
+  templateUrl: './list-molecula.component.html',
+  styleUrls: ['./list-molecula.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ListComponent {
+export class ListMoleculaComponent {
   @Input() items!: IListItem[];
   @Input() useEndLine = true;
 }

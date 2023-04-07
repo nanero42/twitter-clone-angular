@@ -1,16 +1,16 @@
 <nav class="settings-bar">
   <ul class="settings-bar__list df jcsb aic">
-    <molecula-settings-bar-item-left />
-    <molecula-settings-bar-item-center [currentPath]="currentPath" />
-    <molecula-settings-bar-item-right [currentPath]="currentPath" [settingsTemplateRef]="settings" />
+    <app-settings-bar-item-left-molecula />
+    <app-settings-bar-item-center-molecula [currentPath]="currentPath" />
+    <app-settings-bar-item-right-molecula [currentPath]="currentPath" [settingsTemplateRef]="settings" />
   </ul>
   <!-- tabs -->
   <ng-container [ngSwitch]="currentPath">
     <ng-container *ngSwitchCase="ePages.home">
-      <molecula-tabs [tabs]="tab.home" />
+      <app-tabs-molecula [tabs]="tab.home" />
     </ng-container>
     <ng-container *ngSwitchCase="ePages.notifications">
-      <molecula-tabs [tabs]="tab.notifications" />
+      <app-tabs-molecula [tabs]="tab.notifications" />
     </ng-container>
     <ng-container *ngSwitchDefault></ng-container>
   </ng-container>

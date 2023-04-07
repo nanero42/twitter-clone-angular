@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { EAccordionOpenStrategy } from 'src/providers/enums';
 
 @Component({
-  selector: 'molecula-accordion',
-  templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.scss'],
+  selector: 'app-accordion-molecula',
+  templateUrl: './accordion-molecula.component.html',
+  styleUrls: ['./accordion-molecula.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AccordionComponent {
+export class AccordionMoleculaComponent {
   @Input() openStrategy = EAccordionOpenStrategy.many;
 }
