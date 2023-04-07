@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { EPages } from 'src/app/enums';
+import { EPages } from 'src/providers/enums';
 
 @Component({
   selector: 'molecula-settings-bar-item-center',

@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription, tap } from 'rxjs';
-import { EIcons } from 'src/app/enums';
-import { IStore } from 'src/app/interfaces';
+import { EIcons } from 'src/providers/enums';
+import { IStore } from 'src/providers/interfaces';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
@@ -13,7 +13,6 @@ import { toggle } from 'src/store/sidebar/actions';
 })
 export class AccountInfoComponent implements OnInit {
   eIcons = EIcons;
-  subscriptions: Subscription[] = [];
 
   sidebar$!: Observable<boolean>;
 
@@ -23,12 +22,6 @@ export class AccountInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.sidebar$ = this.store.select('sidebar');
-
-    this.subscriptions.push(
-      this.sidebar$.pipe(
-        tap((value) => console.log(value)),
-      ).subscribe(),
-    );
   }
 
   hideSidebar() {

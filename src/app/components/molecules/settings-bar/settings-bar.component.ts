@@ -2,8 +2,8 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
-import { EIcons, EPages } from 'src/app/enums';
-import { ITab } from 'src/app/interfaces';
+import { EIcons, EPages } from 'src/providers/enums';
+import { ITab } from 'src/providers/interfaces';
 import { getFirstUrlStartingWithSlash } from 'src/providers/regexp';
 import { toggle } from 'src/store/sidebar/actions';
 
@@ -24,13 +24,13 @@ export class SettingsBarComponent implements OnInit, OnDestroy {
 
   tab = {
     home: [
-      { id: 0, value: 'For you' },
-      { id: 1, value: 'Following' },
+      { id: 0, value: 'For you', link: '/home' },
+      { id: 1, value: 'Following', link: '/home/following' },
     ],
     notifications: [
-      { id: 0, value: 'All' },
-      { id: 1, value: 'Verified' },
-      { id: 2, value: 'Mentions' },
+      { id: 0, value: 'All', link: '/notifications' },
+      { id: 1, value: 'Verified', link: '/notifications/verified' },
+      { id: 2, value: 'Mentions', link: '/notifications/mentions' },
     ],
   };
 

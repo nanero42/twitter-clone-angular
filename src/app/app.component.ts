@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { EAccordionOpenStrategy, EIcons } from './enums';
-import { IAccordionItem } from './interfaces';
+import { EAccordionOpenStrategy, EIcons } from '../providers/enums';
+import { IAccordionItem } from '../providers/interfaces';
 
 @Component({
   selector: 'app-root',

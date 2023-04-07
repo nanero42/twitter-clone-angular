@@ -7,10 +7,10 @@
         [ngClass]="{'tabs__item_active': tab.id === activeId}"
         (click)="setActiveTab(tab.id)"
       >
-        <span class="tabs__text-container df jcc aic fdc">
+        <a [routerLink]="[tab.link]" class="tabs__text-container df jcc aic fdc">
           <span class="tabs__text">{{ tab.value }}</span>
           <span class="tabs__decor" [ngClass]="{'tabs__decor_active': tab.id === activeId}"></span>
-        </span>
+        </a>
       </li>
     </ul>
   </div>

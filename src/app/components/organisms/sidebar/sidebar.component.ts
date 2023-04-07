@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
-import { EAccordionOpenStrategy, EIcons, EKeyboard } from 'src/app/enums';
-import { IAccordionItem, IAccordionState, IListItem, IStore } from 'src/app/interfaces';
+import { EAccordionOpenStrategy, EIcons, EKeyboard } from 'src/providers/enums';
+import { IAccordionItem, IAccordionState, IListItem, IStore } from 'src/providers/interfaces';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({

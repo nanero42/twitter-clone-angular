@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { IListItem } from 'src/app/interfaces';
+import { IListItem } from 'src/providers/interfaces';
 
 @Component({
   selector: 'molecula-list',

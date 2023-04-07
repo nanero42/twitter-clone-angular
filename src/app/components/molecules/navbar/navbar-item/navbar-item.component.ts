@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { EIcons } from 'src/app/enums';
-import { INavbarLowItem } from 'src/app/interfaces';
+import { EIcons } from 'src/providers/enums';
+import { INavbarLowItem } from 'src/providers/interfaces';
 
 @Component({
   selector: 'molecula-navbar-item',

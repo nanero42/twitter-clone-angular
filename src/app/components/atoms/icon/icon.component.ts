@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { EIcons } from 'src/app/enums';
+import { EIcons } from 'src/providers/enums';
 
 @Component({
   selector: 'atom-icon',

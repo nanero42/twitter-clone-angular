@@ -42,3 +42,11 @@ export enum EAccordionOpenStrategy {
   one = 'one',
   many = 'many',
 }
+
+export enum EPageName {
+  home = 'home',
+  error = 'error',
+  messages = 'messages',
+  notifications = 'notifications',
+  search = 'search',
+}

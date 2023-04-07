@@ -3,6 +3,7 @@ import { EAccordionOpenStrategy, EIcons, EPages } from "../enums";
 export interface ITab {
   id: number;
   value: string;
+  link: string;
 }
 
 export interface INavbarLowItem {

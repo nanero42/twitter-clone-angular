@@ -1,22 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { OrganismsModule } from '../components/organisms/organisms.module';
-import { NavbarsComponent } from './navbars/navbars.component';
-
-const exportedTemplates = [
-  NavbarsComponent,
-];
+import { NavbarsModule } from './navbars/navbars.module';
 
 @NgModule({
   declarations: [
-    ...exportedTemplates,
   ],
   imports: [
     CommonModule,
     OrganismsModule,
+    NavbarsModule,
   ],
   exports: [
-    ...exportedTemplates,
+    NavbarsModule,
   ],
 })
 export class TemplatesModule { }

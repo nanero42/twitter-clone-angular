@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { EIcons } from 'src/app/enums';
+import { EIcons } from 'src/providers/enums';
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({

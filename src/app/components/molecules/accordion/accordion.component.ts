@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { EAccordionOpenStrategy } from 'src/app/enums';
+import { EAccordionOpenStrategy } from 'src/providers/enums';
 
 @Component({
   selector: 'molecula-accordion',

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { EAccordionOpenStrategy, EIcons } from 'src/app/enums';
+import { EAccordionOpenStrategy, EIcons } from 'src/providers/enums';
 import { removeItem } from 'src/providers/utils';
 
 @Component({

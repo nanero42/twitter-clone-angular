@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { IAccordionItem } from 'src/app/interfaces';
+import { IAccordionItem } from 'src/providers/interfaces';
 
 @Component({
   selector: 'template-navbars',

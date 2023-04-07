@@ -1,8 +1,8 @@
 import { Location } from '@angular/common';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { EIcons, EPages } from 'src/app/enums';
-import { INavbarLowItem } from 'src/app/interfaces';
+import { EIcons, EPages } from 'src/providers/enums';
+import { INavbarLowItem } from 'src/providers/interfaces';
 
 @Component({
   selector: 'molecula-navbar',
