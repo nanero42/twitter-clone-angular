@@ -1,0 +1,22 @@
+<div class="shadow" [ngStyle]="style">
+  <div class="sidebar">
+    <app-account-info-molecula/>
+    <app-list-molecula [items]="listItems" />
+    <div *ngIf="accordionItems?.length">
+      <app-accordion-molecula
+        [openStrategy]="eAccordionOpenStrategy.one"
+      >
+        <app-accordion-molecula-item
+          *ngFor="let item of accordionItems"
+          [id]="item.id"
+          [title]="item.title"
+          [icon]="eIcons.arrowDown"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem voluptatum ratione quia praesentium voluptate consequuntur autem assumenda eligendi illo eius, in rerum, tempora iste perferendis ab cum eveniet eum accusamus.
+          </p>
+        </app-accordion-molecula-item>
+      </app-accordion-molecula>
+    </div>
+  </div>
+</div>

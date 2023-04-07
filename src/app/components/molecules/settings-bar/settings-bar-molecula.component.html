@@ -1,0 +1,19 @@
+<nav class="settings-bar">
+  <ul class="settings-bar__list df jcsb aic">
+    <app-settings-bar-item-left-molecula />
+    <app-settings-bar-item-center-molecula [currentPath]="currentPath" />
+    <app-settings-bar-item-right-molecula [currentPath]="currentPath" [settingsTemplateRef]="settings" />
+  </ul>
+  <!-- tabs -->
+  <ng-container [ngSwitch]="currentPath">
+    <ng-container *ngSwitchCase="ePages.home">
+      <app-tabs-molecula [tabs]="tab.home" />
+    </ng-container>
+    <ng-container *ngSwitchCase="ePages.notifications">
+      <app-tabs-molecula [tabs]="tab.notifications" />
+    </ng-container>
+    <ng-container *ngSwitchDefault></ng-container>
+  </ng-container>
+</nav>
+
+<ng-template #settings><a><app-icon-atom [icon]="eIcons.settings" /></a></ng-template>
