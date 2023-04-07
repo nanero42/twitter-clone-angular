@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { EIcons } from 'src/providers/enums';
 
 @Component({
-  selector: 'atom-icon',
-  templateUrl: './icon.component.html',
-  styleUrls: ['./icon.component.scss']
+  selector: 'app-icon-atom',
+  templateUrl: './icon-atom.component.html',
+  styleUrls: ['./icon-atom.component.scss']
 })
-export class IconComponent {
+export class IconAtomComponent {
   @Input() icon = EIcons.logo;
   @Input() fill = '#000';
   @Input() width = '22px';

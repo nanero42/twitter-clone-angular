@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconComponent } from './icon/icon.component';
-
-const exportedAtoms = [
-  IconComponent,
-]
+import { IconAtomComponent } from './icon-atom.component';
 
 @NgModule({
   declarations: [
-    ...exportedAtoms,
+    IconAtomComponent,
   ],
   imports: [
     CommonModule,
   ],
   exports: [
-    ...exportedAtoms,
-  ]
+    IconAtomComponent,
+  ],
 })
-export class AtomsModule { }
+export class IconAtomModule { }
