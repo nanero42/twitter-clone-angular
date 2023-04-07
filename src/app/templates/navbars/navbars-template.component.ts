@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { IAccordionItem } from 'src/providers/interfaces';
 
 @Component({
-  selector: 'template-navbars',
-  templateUrl: './navbars.component.html',
-  styleUrls: ['./navbars.component.scss'],
+  selector: 'app-navbars-template',
+  templateUrl: './navbars-template.component.html',
+  styleUrls: ['./navbars-template.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavbarsComponent {
+export class NavbarsTemplateComponent {
   @Input() accordionItems: IAccordionItem[] = [];
 }

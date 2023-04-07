@@ -6,12 +6,12 @@ import { IAccordionItem, IAccordionState, IListItem, IStore } from 'src/provider
 import { toggle } from 'src/store/sidebar/actions';
 
 @Component({
-  selector: 'organism-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
+  selector: 'app-sidebar-organism',
+  templateUrl: './sidebar-organism.component.html',
+  styleUrls: ['./sidebar-organism.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SidebarComponent {
+export class SidebarOrganismComponent {
   private _subscriptions: Subscription[] = [];
 
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
